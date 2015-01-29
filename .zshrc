@@ -27,6 +27,11 @@ alias moghedien="cd ~/Code/moghedien"
 alias madrse="cd ~/Code/madrse/backend && source ~/Venvs/madrse/bin/activate && source .env"
 alias madrse-frontend="cd ~/Code/madrse/frontend"
 
+alias ll="ls -G -AF"
+
+alias ga="git add"
+alias gcam="git commit -am"
+alias gcm="git commit -m"
 alias gf="git fetch"
 alias gs="git status"
 alias gmd="git merge develop"
