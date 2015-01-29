@@ -27,7 +27,7 @@ zstyle ':completion:*' menu select
 # -------------------------------------------------------------------
 export PS1='
 %n@%m %. 
-☕ ️'
+☕ ️  '
 
 
 # Code projects
@@ -67,6 +67,14 @@ alias gcp="git cherry-pick"
 # dotfiles alias
 # -------------------------------------------------------------------
 alias dotfiles="cd ~/Code/dotfiles"
+
+
+# Local extras
+# -------------------------------------------------------------------
+if [ -e ~/.zshrc.local ]
+then
+    source ~/.zshrc.local
+fi
 
 
 # ASCII ART!
