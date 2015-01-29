@@ -23,6 +23,10 @@ alias semirhage="cd ~/Code/semirhage && source ~/Venvs/semirhage/bin/activate &&
 alias lanfear="cd ~/Code/lanfear"
 alias graendal="cd ~/Code/graendal"
 alias moghedien="cd ~/Code/moghedien"
+
+alias madrse="cd ~/Code/madrse/backend && source ~/Venvs/madrse/bin/activate && source .env"
+alias madrse-frontend="cd ~/Code/madrse/frontend"
+
 alias gf="git fetch"
 alias gmd="git merge develop"
 alias gpod="git push origin develop"
