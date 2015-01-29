@@ -28,6 +28,7 @@ alias madrse="cd ~/Code/madrse/backend && source ~/Venvs/madrse/bin/activate && 
 alias madrse-frontend="cd ~/Code/madrse/frontend"
 
 alias gf="git fetch"
+alias gs="git status"
 alias gmd="git merge develop"
 alias gpod="git push origin develop"
 alias gpom="git push origin master"
@@ -38,7 +39,6 @@ alias dotfiles="cd ~/Code/dotfiles"
 
 echo ''
 echo ''
-echo ''
 echo '     8888b. 888  888 '
 echo '        "88b888  888 '
 echo '    .d888888888  888 '
@@ -47,5 +47,4 @@ echo '    "Y888888 "Y88888 '
 echo '                 888 '
 echo '            Y8b d88P '
 echo '             "Y88P"  '
-echo ''
 echo ''
