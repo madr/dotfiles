@@ -27,7 +27,7 @@ zstyle ':completion:*' menu select
 # -------------------------------------------------------------------
 export PS1='
 %n@%m %. 
-☕ ️  '
+☕ ️'
 
 
 # Code projects
