@@ -49,6 +49,11 @@ alias madrse-frontend="cd ~/Code/madrse/frontend"
 alias ll="ls -G -AF"
 
 
+# re-read zshrc
+# -------------------------------------------------------------------
+alias zshrc="source ~/.zshrc"
+
+
 # Git aliases
 # -------------------------------------------------------------------
 alias ga="git add"
@@ -62,6 +67,14 @@ alias gpom="git push origin master"
 alias gmod="git merge origin/develop"
 alias gmom="git merge origin/master"
 alias gcp="git cherry-pick"
+
+
+# Git aliases
+# -------------------------------------------------------------------
+alias nrs="npm install && npm run serve"
+alias nrw="npm install && npm run watch"
+alias nrd="npm install && npm run deploy"
+alias nrr="npm install && npm run release"
 
 
 # dotfiles alias
