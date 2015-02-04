@@ -79,6 +79,17 @@ alias nrr="npm install && npm run release"
 
 # dotfiles alias
 # -------------------------------------------------------------------
+alias ni="npm install"
+alias nis="npm install --save"
+alias nisd="npm install --save-dev"
+alias nrb="npm run build"
+alias nrs="npm run serve"
+alias nrr="npm run release"
+alias nrw="npm run watch"
+
+
+# dotfiles alias
+# -------------------------------------------------------------------
 alias dotfiles="cd ~/Code/dotfiles"
 
 
