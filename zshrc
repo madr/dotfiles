@@ -35,7 +35,7 @@ export PS1='
 alias semirhage="cd ~/Code/semirhage && source ~/Venvs/semirhage/bin/activate && source ~/Dropbox/tajmme-shared/yttan.env"
 alias lanfear="cd ~/Code/lanfear"
 alias graendal="cd ~/Code/graendal"
-alias moghedien="cd ~/Code/moghedien"
+alias mesaana="cd ~/Code/mesaana"
 
 
 # madr.se
