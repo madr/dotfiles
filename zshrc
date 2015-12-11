@@ -68,7 +68,8 @@ alias gmod="git merge origin/develop"
 alias gmom="git merge origin/master"
 alias gcp="git cherry-pick"
 alias gcb="git checkout -b"
-
+alias gco="git checkout"
+alias gm="git merge"
 
 # NODE aliases
 # -------------------------------------------------------------------
