@@ -70,6 +70,8 @@ alias gcp="git cherry-pick"
 alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gm="git merge"
+alias gd='git diff'
+
 
 # NODE aliases
 # -------------------------------------------------------------------
@@ -138,6 +140,11 @@ fi
 # dotfiles alias
 # -------------------------------------------------------------------
 alias dotfiles="cd ~/Code/dotfiles"
+
+
+# sudo alias
+# -------------------------------------------------------------------
+alias fucking='sudo'
 
 
 # Local extras
