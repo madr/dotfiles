@@ -146,6 +146,7 @@ alias dotfiles="cd ~/Code/dotfiles"
 # sudo alias
 # -------------------------------------------------------------------
 alias fucking='sudo'
+alias effing='fucking'
 
 
 # Local extras
