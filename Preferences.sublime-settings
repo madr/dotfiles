@@ -7,7 +7,7 @@
 	"open_files_in_new_window": true,
 	"tab_size": 4,
 	"theme": "Spacegray Eighties.sublime-theme",
-	"translate_tabs_to_spaces": truem
+	"translate_tabs_to_spaces": true,
 	"hot_exit": false,
-    	"remember_open_files": false,
+    	"remember_open_files": false
 }
