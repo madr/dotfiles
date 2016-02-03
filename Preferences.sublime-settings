@@ -1,12 +1,11 @@
 {
-	"color_scheme": "Packages/Theme - SpaceGray/base16-ocean.dark.tmTheme",
 	"draw_white_space": "all",
 	"font_size": 10.0,
-	"highlight_modified_tabs": true,
 	"indent_to_bracket": true,
 	"line_numbers": true,
 	"open_files_in_new_window": true,
 	"tab_size": 4,
-	"theme": "Spacegray Eighties.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"hot_exit": false,
+    	"remember_open_files": false
 }
