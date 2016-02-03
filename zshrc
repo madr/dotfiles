@@ -30,20 +30,6 @@ export PS1='
 $ '
 
 
-# Code projects
-# -------------------------------------------------------------------
-alias semirhage="cd ~/Code/semirhage && source ~/Venvs/semirhage/bin/activate && source ~/Dropbox/tajmme-shared/yttan.env"
-alias lanfear="cd ~/Code/lanfear"
-alias graendal="cd ~/Code/graendal"
-alias mesaana="cd ~/Code/mesaana"
-
-
-# madr.se
-# -------------------------------------------------------------------
-alias madrse="cd ~/Code/madrse/backend && source ~/Venvs/madrse/bin/activate && source .env"
-alias madrse-frontend="cd ~/Code/madrse/frontend"
-
-
 # ll alias
 # -------------------------------------------------------------------
 alias ll="ls -GAFho"
@@ -68,6 +54,10 @@ alias gmod="git merge origin/develop"
 alias gmom="git merge origin/master"
 alias gcp="git cherry-pick"
 alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gm="git merge"
+alias gd='git diff'
+alias glo='git log --oneline'
 
 
 # NODE aliases
@@ -139,12 +129,15 @@ fi
 alias dotfiles="cd ~/Code/dotfiles"
 
 
-# Local extras
+# Exports
 # -------------------------------------------------------------------
-if [ -e ~/.zshrc.local ]
-then
-    source ~/.zshrc.local
-fi
+export EDITOR='subl'
+
+
+# sudo alias
+# -------------------------------------------------------------------
+alias fucking='sudo'
+alias effing='fucking'
 
 
 # ASCII ART!
@@ -160,3 +153,13 @@ echo '                 888 '
 echo '            Y8b d88P '
 echo '             "Y88P"  '
 echo ''
+
+
+# Local extras
+# -------------------------------------------------------------------
+if [ -e ~/.zshrc.local ]
+then
+    source ~/.zshrc.local
+fi
+
+
