@@ -30,20 +30,6 @@ export PS1='
 $ '
 
 
-# Code projects
-# -------------------------------------------------------------------
-alias semirhage="cd ~/Code/semirhage && source ~/Venvs/semirhage/bin/activate && source ~/Dropbox/tajmme-shared/yttan.env"
-alias lanfear="cd ~/Code/lanfear"
-alias graendal="cd ~/Code/graendal"
-alias mesaana="cd ~/Code/mesaana"
-
-
-# madr.se
-# -------------------------------------------------------------------
-alias madrse="cd ~/Code/madrse/backend && source ~/Venvs/madrse/bin/activate && source .env"
-alias madrse-frontend="cd ~/Code/madrse/frontend"
-
-
 # ll alias
 # -------------------------------------------------------------------
 alias ll="ls -GAFho"
@@ -143,18 +129,15 @@ fi
 alias dotfiles="cd ~/Code/dotfiles"
 
 
+# Exports
+# -------------------------------------------------------------------
+export EDITOR='subl'
+
+
 # sudo alias
 # -------------------------------------------------------------------
 alias fucking='sudo'
 alias effing='fucking'
-
-
-# Local extras
-# -------------------------------------------------------------------
-if [ -e ~/.zshrc.local ]
-then
-    source ~/.zshrc.local
-fi
 
 
 # ASCII ART!
@@ -170,3 +153,13 @@ echo '                 888 '
 echo '            Y8b d88P '
 echo '             "Y88P"  '
 echo ''
+
+
+# Local extras
+# -------------------------------------------------------------------
+if [ -e ~/.zshrc.local ]
+then
+    source ~/.zshrc.local
+fi
+
+
