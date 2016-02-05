@@ -1,11 +1,8 @@
 {
-	"draw_white_space": "all",
-	"font_size": 10.0,
-	"indent_to_bracket": true,
-	"line_numbers": true,
-	"open_files_in_new_window": true,
-	"tab_size": 4,
-	"translate_tabs_to_spaces": true,
+	"ignored_packages": [],
+	"remember_open_files": false,
 	"hot_exit": false,
-    	"remember_open_files": false
+    "rulers": [70],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true
 }
