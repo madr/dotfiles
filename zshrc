@@ -140,19 +140,9 @@ alias fucking='sudo'
 alias effing='fucking'
 
 
-# ASCII ART!
+# Vädret
 # -------------------------------------------------------------------
-echo ''
-echo ''
-echo '     8888b. 888  888 '
-echo '        "88b888  888 '
-echo '    .d888888888  888 '
-echo '    888  888Y88b 888 '
-echo '    "Y888888 "Y88888 '
-echo '                 888 '
-echo '            Y8b d88P '
-echo '             "Y88P"  '
-echo ''
+alias vädret="curl -4 http://wttr.in/Östersund"
 
 
 # Local extras
