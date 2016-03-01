@@ -1,4 +1,5 @@
 autocmd FileType python set breakindentopt=shift:4
+autocmd FileType javascript set breakindentopt=shift:2
 
 :filetype plugin on
 :syntax on
@@ -22,5 +23,4 @@ augroup resCur
   autocmd!
   autocmd BufReadPost * call setpos(".", getpos("'\""))
 augroup END
-
 
