@@ -129,9 +129,10 @@ fi
 alias dotfiles="cd ~/Code/dotfiles"
 
 
-# Exports
+# Misc Exports
 # -------------------------------------------------------------------
-export EDITOR='subl'
+export EDITOR='vim'
+alias nano=vim
 
 
 # sudo alias
