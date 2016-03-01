@@ -133,6 +133,7 @@ alias dotfiles="cd ~/Code/dotfiles"
 # -------------------------------------------------------------------
 export EDITOR='vim'
 alias nano=vim
+alias vi=vim
 
 
 # sudo alias
