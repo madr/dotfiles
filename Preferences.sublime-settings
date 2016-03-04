@@ -49,31 +49,14 @@
 		".DS_Store",
 		"*.class",
 		"*.psd",
-		"*.db",
-		"/home/ay/Code/i2i/wide/code/languages/lang_swedish.conf",
-		"/home/ay/Code/i2i/wide/code/templates/wide/css/style.css.map",
-		"/home/ay/Code/i2i/wide/code/libs/dbconnect.php",
-		"/home/ay/Code/i2i/wide/code/templates/wide/css/texgyreadventor-bold-webfont.woff",
-		"/home/ay/Code/i2i/wide/code/templates/wide/css/texgyreadventor-bold-webfont.svg",
-		"/home/ay/Code/i2i/wide/code/templates/wide/css/texgyreadventor-bold-webfont.ttf",
-		"/home/ay/Code/i2i/wide/code/templates/wide/css/style.css",
-		"/home/ay/Code/i2i/wide/code/templates/wide/css/texgyreadventor-bold-webfont.eot",
-		"/home/ay/Code/i2i/wide/code/settings.php",
-		"/home/ay/Code/i2i/wide/code/templates/wide/js/tag_data.js",
-		"/home/ay/Code/i2i/wide/code/ultrawide_settings.php",
-		"/home/ay/Code/i2i/wide/code/modules/upload/attachments/photo1439853949127fa647821eba0.jpeg",
-		"/home/ay/Code/i2i/wide/code/templates/wide/js/skills_data.js"
+		"*.db"
 	],
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".hg",
-		"CVS",
-		"/home/ay/Code/i2i/wide/code/templates/wide/css/images",
-		"/home/ay/Code/i2i/wide/code/.idea",
-		"/home/ay/Code/i2i/wide/code/cache",
-		"/home/ay/Code/i2i/wide/code/blob"
+		"CVS"
 	],
 	"hot_exit": false,
 	"ignored_packages":

@@ -142,9 +142,10 @@ alias fucking='sudo'
 alias effing='fucking'
 
 
-# Vädret
+# Annat
 # -------------------------------------------------------------------
 alias vädret="curl -4 http://wttr.in/Östersund"
+alias whatsmyip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 
 
 # Local extras
