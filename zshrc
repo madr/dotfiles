@@ -55,10 +55,13 @@ alias gmom="git merge origin/master"
 alias gcp="git cherry-pick"
 alias gcb="git checkout -b"
 alias gco="git checkout"
-alias gm="git merge"
+alias gcod="git checkout develop"
+alias gcom="git checkout master"
 alias gd='git diff'
 alias glo='git log --oneline'
-
+alias gb='git branch -v'
+alias gap='git apply-patches'
+alias glass='gb'
 
 # NODE aliases
 # -------------------------------------------------------------------
@@ -131,8 +134,7 @@ alias dotfiles="cd ~/Code/dotfiles"
 
 # Misc Exports
 # -------------------------------------------------------------------
-export EDITOR='vim'
-alias nano=vim
+export EDITOR='nano'
 alias vi=vim
 
 
@@ -146,6 +148,7 @@ alias effing='fucking'
 # -------------------------------------------------------------------
 alias vädret="curl -4 http://wttr.in/Östersund"
 alias whatsmyip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+alias whois='dig -t ANY'
 
 
 # Local extras
