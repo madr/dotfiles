@@ -21,7 +21,20 @@ setopt completealiases
 autoload -U promptinit
 promptinit
 zstyle ':completion:*' menu select
-
+autoload -U colors
+colors
+setopt PROMPT_SUBST
+ 
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+ 
+typeset -ga preexec_functions
+typeset -ga precmd_functions
+typeset -ga chpwd_functions
+ 
+preexec_functions+='preexec_update_git_vars'
+precmd_functions+='precmd_update_git_vars'
+chpwd_functions+='chpwd_update_git_vars'
 
 # PS1
 # -------------------------------------------------------------------
@@ -43,8 +56,8 @@ alias zshrc="source ~/.zshrc"
 # Git aliases
 # -------------------------------------------------------------------
 alias ga="git add"
-alias gcam="git commit -am"
-alias gcm="git commit -m"
+alias gc='git commit'
+alias gca="git commit -a"
 alias gf="git fetch"
 alias gs="git status"
 alias gmd="git merge develop"
@@ -58,7 +71,7 @@ alias gco="git checkout"
 alias gcod="git checkout develop"
 alias gcom="git checkout master"
 alias gd='git diff'
-alias glo='git log --oneline'
+alias glo='git log --oneline --decorate'
 alias gb='git branch -v'
 alias gap='git apply-patches'
 alias glass='gb'
@@ -158,4 +171,6 @@ then
     source ~/.zshrc.local
 fi
 
-
+PROMPT=$'
+%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%}  
+%# '
