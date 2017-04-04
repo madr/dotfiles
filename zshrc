@@ -172,5 +172,5 @@ then
 fi
 
 PROMPT=$'
-%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%}  
+%F{yellow}%n%f@%F{white}%m%f %{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%}  
 %# '
