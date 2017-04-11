@@ -55,7 +55,7 @@ alias zshrc="source ~/.zshrc"
 
 # Git aliases
 # -------------------------------------------------------------------
-alias ga="git add"
+alias gap="git add -p"
 alias gc='git commit'
 alias gca="git commit -a"
 alias gf="git fetch"
@@ -73,8 +73,9 @@ alias gcom="git checkout master"
 alias gd='git diff'
 alias glo='git log --oneline --decorate'
 alias gb='git branch -v'
-alias gap='git apply-patches'
 alias glass='gb'
+alias gcane='git commit --amend --no-edit'
+alias grh='git reset --hard'
 
 # NODE aliases
 # -------------------------------------------------------------------
@@ -159,7 +160,9 @@ alias effing='fucking'
 
 # Annat
 # -------------------------------------------------------------------
-alias vädret="curl -4 http://wttr.in/Östersund"
+alias vadre="curl -4 http://wttr.in/Östersund"
+alias vedre="curl -4 http://wttr.in/Stockholm"
+alias vädret="curl -4 http://wttr.in/Söderhamn"
 alias whatsmyip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias whois='dig -t ANY'
 
