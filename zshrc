@@ -73,9 +73,13 @@ alias gcom="git checkout master"
 alias gd='git diff'
 alias glo='git log --oneline --decorate'
 alias gb='git branch -v'
-alias glass='gb'
 alias gcane='git commit --amend --no-edit'
 alias grh='git reset --hard'
+alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
+alias gmo='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
+alias glenn='gp'
+alias glass='gb'
+
 
 # NODE aliases
 # -------------------------------------------------------------------
