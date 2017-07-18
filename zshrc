@@ -36,12 +36,6 @@ preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
 
-# PS1
-# -------------------------------------------------------------------
-export PS1='
-%n@%m %. 
-$ '
-
 
 # ll alias
 # -------------------------------------------------------------------
@@ -76,7 +70,8 @@ alias gb='git branch -v'
 alias gcane='git commit --amend --no-edit'
 alias grh='git reset --hard'
 alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
-alias gmo='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
+alias gm='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
+alias gmsot='git merge --strategy-option theirs'
 alias glenn='gp'
 alias glass='gb'
 
@@ -152,8 +147,9 @@ alias dotfiles="cd ~/Code/dotfiles"
 
 # Misc Exports
 # -------------------------------------------------------------------
-export EDITOR='nano'
-alias vi=vim
+export EDITOR='nvim'
+alias vi=nvim
+alias shrug='echo "¯\_(ツ)_/¯"'
 
 
 # sudo alias
