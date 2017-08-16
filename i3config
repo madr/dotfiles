@@ -54,11 +54,12 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+odiaeresis move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -160,3 +161,6 @@ bar {
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Shift+L exec "dm-tool lock"
+
+
+# exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal; workspace 2; exec google-chrome; workspace 3; exec charm ~/Code/kundo; workspace 10; exec loxodo; exec spotify'
