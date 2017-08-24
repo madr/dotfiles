@@ -50,30 +50,30 @@ alias zshrc="source ~/.zshrc"
 # Git aliases
 # -------------------------------------------------------------------
 alias gap="git add -p"
+alias gb='git branch -v'
 alias gc='git commit'
-alias gca="git commit -a"
-alias gf="git fetch"
-alias gs="git status"
-alias gmd="git merge develop"
-alias gpod="git push origin develop"
-alias gpom="git push origin master"
-alias gmod="git merge origin/develop"
-alias gmom="git merge origin/master"
-alias gcp="git cherry-pick"
+alias gcane='git commit --amend --no-edit'
 alias gcb="git checkout -b"
-alias gco="git checkout"
+alias gcd='git clean -d -x'
 alias gcod="git checkout develop"
 alias gcom="git checkout master"
 alias gd='git diff'
+alias gf="git fetch"
 alias glo='git log --oneline --decorate'
-alias gb='git branch -v'
-alias gcane='git commit --amend --no-edit'
-alias grh='git reset --hard'
-alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gm='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
+alias gmd="git merge develop"
+alias gmod="git merge origin/develop"
+alias gmom="git merge origin/master"
 alias gmsot='git merge --strategy-option theirs'
+alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpod="git push origin develop"
+alias gpom="git push origin master"
+alias grh='git reset --hard'
+alias gs="git status"
+
 alias glenn='gp'
 alias glass='gb'
+
 
 
 # NODE aliases
