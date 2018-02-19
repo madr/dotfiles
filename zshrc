@@ -147,8 +147,8 @@ alias dotfiles="cd ~/Code/dotfiles"
 
 # Misc Exports
 # -------------------------------------------------------------------
-export EDITOR='emacsclient'
-alias vi=emacsclient
+export EDITOR='vim'
+alias vi=vim
 alias shrug='echo "¯\_(ツ)_/¯"'
 
 

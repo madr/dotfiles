@@ -163,6 +163,9 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Shift+L exec "dm-tool lock"
 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10% && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -10% && killall -SIGUSR1 i3status
+
 exec --no-startup-id xsetroot -solid "#000000"
 
 # exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal; workspace 2; exec google-chrome; workspace 3; exec charm ~/Code/kundo; workspace 10; exec loxodo; exec spotify'
