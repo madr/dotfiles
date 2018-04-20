@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000
+SAVEHIST=1000000
 setopt autocd
 unsetopt beep
 bindkey -e
@@ -23,18 +23,7 @@ promptinit
 zstyle ':completion:*' menu select
 autoload -U colors
 colors
-setopt PROMPT_SUBST
- 
-fpath=(~/.zsh/functions $fpath)
-autoload -U ~/.zsh/functions/*(:t)
- 
-typeset -ga preexec_functions
-typeset -ga precmd_functions
-typeset -ga chpwd_functions
- 
-preexec_functions+='preexec_update_git_vars'
-precmd_functions+='precmd_update_git_vars'
-chpwd_functions+='chpwd_update_git_vars'
+setopt PROMPT_SUBST 
 
 
 # ll alias
@@ -162,7 +151,7 @@ alias effing='fucking'
 # -------------------------------------------------------------------
 alias vadre="curl -4 http://wttr.in/Östersund"
 alias vedre="curl -4 http://wttr.in/Stockholm"
-alias vädret="curl -4 http://wttr.in/Söderhamn"
+alias vädret="curl -4 http://wttr.in/Gävle"
 alias whatsmyip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias whois='dig -t ANY'
 
