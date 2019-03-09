@@ -32,35 +32,15 @@ alias glass='gb'
 
 
 
-# NODE aliases
+# node.js aliases
 # -------------------------------------------------------------------
+alias nci="rm -rf node_modules && npm install"
 alias nrs="npm install && npm run serve"
+alias nrb="npm install && npm run build"
 alias nrw="npm install && npm run watch"
+alias nrbw="npm install && npm run build-watch"
 alias nrd="npm install && npm run deploy"
 alias nrr="npm install && npm run release"
-
-
-# npm alias
-# -------------------------------------------------------------------
-alias ni="npm install"
-alias nis="npm install --save"
-alias nisd="npm install --save-dev"
-alias nrb="npm run build"
-alias nrs="npm run serve"
-alias nrr="npm run release"
-alias nrw="npm run watch"
-
-
-# dotfiles alias
-# -------------------------------------------------------------------
-alias dotfiles="cd ~/Code/dotfiles"
-
-
-# Misc Exports
-# -------------------------------------------------------------------
-export EDITOR='vim'
-alias vi=vim
-alias shrug='echo "¯\_(ツ)_/¯"'
 
 
 # sudo alias
