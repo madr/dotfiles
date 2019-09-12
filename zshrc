@@ -8,24 +8,31 @@ alias ll="ls -GAFho"
 alias gap="git add -p"
 alias gb='git branch -v'
 alias gc='git commit'
+alias gcs='git commit -S'
 alias gcane='git commit --amend --no-edit'
-alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gco-="git checkout -"
+alias gcob="git checkout -b"
 alias gcd='git clean -d -x'
-alias gcod="git checkout develop"
+#alias gcod="git checkout develop"
 alias gcom="git checkout master"
 alias gd='git diff'
 alias gf="git fetch"
 alias glo='git log --oneline --decorate'
 alias gm='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
-alias gmd="git merge develop"
-alias gmod="git merge origin/develop"
+#alias gmd="git merge develop"
+#alias gmod="git merge origin/develop"
 alias gmom="git merge origin/master"
 alias gmsot='git merge --strategy-option theirs'
 alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
-alias gpod="git push origin develop"
+alias gpfwl='gp --force-with-lease'
+#alias gpod="git push origin develop"
 alias gpom="git push origin master"
 alias grh='git reset --hard'
 alias gs="git status"
+alias gri="git rebase -i"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 
 alias glenn='gp'
 alias glass='gb'
@@ -52,8 +59,8 @@ alias effing='fucking'
 # Annat
 # -------------------------------------------------------------------
 alias vadre="curl -4 http://wttr.in/Östersund"
-alias vedre="curl -4 http://wttr.in/Stockholm"
-alias vädret="curl -4 http://wttr.in/Gävle"
+alias vedreh="curl -4 http://wttr.in/Stockholm"
+alias vädret="curl -4 http://wttr.in/Söderhamn"
 alias whatsmyip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias whois='dig -t ANY'
 
