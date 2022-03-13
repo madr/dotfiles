@@ -1,0 +1,86 @@
+/*******************************************************************************
+ * ROFI Color theme
+ * User: ay
+ *******************************************************************************/
+@import "~/.cache/wal/colors-rofi-dark"
+
+* {
+    transparent:                 rgba ( 0, 0, 0, 0% );
+    semi-transparent:            rgba ( 0, 0, 0, 75% );
+    solid-transparent:            rgba ( 0, 0, 0, 92% );
+}
+window {
+    background-color: @transparent;
+    border:           0;
+    padding:          0;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+    background-color: @transparent;
+}
+listview {
+    fixed-height: 0;
+    spacing:      0 ;
+    scrollbar:    false;
+    background-color: @semi-transparent;
+    border-radius: 8px;
+}
+element {
+    background-color: @transparent;
+    border:  0;
+    padding: 8px;
+}
+element-text {
+    background-color: @transparent;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+element.normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color: @alternate-urgent-foreground;
+}
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color: @alternate-active-foreground;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color: @selected-urgent-foreground;
+}
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}
+inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    background-color: @solid-transparent;
+    padding:    16px;
+    children:   [ entry ];
+    border-radius: 8px;
+}
+entry {
+    spacing:    0;
+    text-color: @foreground;
+    background-color: @transparent;
+}

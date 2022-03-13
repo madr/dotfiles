@@ -1,10 +1,10 @@
 configuration {
  modi: "combi";
- font: "Fira Sans 16";
+ font: "Fira Sans 13";
  combi-modi: "drun,filebrowser";
  }
 //@theme "gruvbox-dark"
 //@theme "/usr/share/rofi/themes/blue.rasi"
 //@theme "/usr/share/rofi/themes/Pop-Dark.rasi"
-@theme "/usr/share/rofi/themes/android_notification.rasi"
+@theme "/home/ay/Kod/dotfiles/rofitheme.rasi"
 //@theme "/usr/share/rofi/themes/solarized_alternate.rasi"

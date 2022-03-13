@@ -201,7 +201,7 @@ bindsym $mod+space exec rofi -show combi
 bindsym $mod+o exec terminator joshuto
 
 # Set keyboard maps to choose from, do so AFTER polybar init
-exec setxkbmap -layout us,se
+exec_always setxkbmap -layout us,se
 
 # Screenshots
 bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Rahvin/screenshots && mv $f ~/Rahvin/screenshots && xclip -selection clipboard -t image/png -i ~/Rahvin/screenshots/`ls -1 -t ~/Rahvin/screenshots | head -1`' # Area selection
