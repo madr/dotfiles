@@ -189,16 +189,16 @@ gaps inner 30
 gaps outer 0
 
 # start window compositor
-exec picom &
+#exec picom &
 #exec plank &
 exec_always --no-startup-id $HOME/.config/polybar/launcher.sh
 
 # set wallpaper
-exec wal -i /backups/Rahvin/allpapers/$(ls /backups/Rahvin/allpapers | shuf -n 1)
+# exec wal -i /backups/Rahvin/allpapers/$(ls /backups/Rahvin/allpapers | shuf -n 1)
 
 # ulauncher and polybar
 bindsym $mod+space exec rofi -show combi
-bindsym $mod+o exec terminator joshuto
+bindsym $mod+o exec kitty joshuto
 
 # Set keyboard maps to choose from, do so AFTER polybar init
 exec_always setxkbmap -layout us,se
