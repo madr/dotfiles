@@ -1,0 +1,39 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Andromeda",
+    "dark": "One Dark"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff"],
+      "format_on_save": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+        }
+      },
+      "formatter": [
+        {
+          "code_actions": {
+            // Fix all auto-fixable lint violations
+            "source.fixAll.ruff": false,
+            // Organize imports
+            "source.organizeImports.ruff": true
+          }
+        }
+      ]
+    }
+  }
+}

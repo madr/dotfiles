@@ -1,0 +1,2 @@
+XKB_DEFAULT_LAYOUT=us,se
+XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+<menu id="root-menu" label="root-menu">
+  <menu id="Accessories" label="Accessories">
+    <item label="About Xfce">
+      <action name="Execute"><command>xfce4-about</command></action>
+    </item>
+    <item label="Bulk Rename">
+      <action name="Execute"><command>thunar --bulk-rename</command></action>
+    </item>
+    <item label="Flatseal">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=com.github.tchx84.Flatseal com.github.tchx84.Flatseal</command></action>
+    </item>
+    <item label="Helix">
+      <action name="Execute"><command>helix</command></action>
+    </item>
+    <item label="LibreOffice">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice @@u  @@</command></action>
+    </item>
+    <item label="rtcqs">
+      <action name="Execute"><command>rtcqs_gui</command></action>
+    </item>
+    <item label="Thunar File Manager">
+      <action name="Execute"><command>thunar</command></action>
+    </item>
+    <item label="Yambar">
+      <action name="Execute"><command>yambar</command></action>
+    </item>
+    <item label="Zed">
+      <action name="Execute"><command>zeditor</command></action>
+    </item>
+  </menu> <!-- Accessories -->
+  <menu id="Development" label="Development">
+    <item label="Zed">
+      <action name="Execute"><command>zeditor</command></action>
+    </item>
+  </menu> <!-- Development -->
+  <menu id="Education" label="Education">
+    <item label="LibreOffice Math">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --math @@u  @@</command></action>
+    </item>
+  </menu> <!-- Education -->
+  <menu id="Graphics" label="Graphics">
+    <item label="Blue Recorder">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/opt/blue-recorder sa.sy.bluerecorder</command></action>
+    </item>
+    <item label="LibreOffice Draw">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --draw @@u  @@</command></action>
+    </item>
+  </menu> <!-- Graphics -->
+  <menu id="Internet" label="Internet">
+    <item label="Advanced Network Configuration">
+      <action name="Execute"><command>nm-connection-editor</command></action>
+    </item>
+    <item label="Avahi SSH Server Browser">
+      <action name="Execute"><command>/usr/bin/bssh</command></action>
+    </item>
+    <item label="Avahi VNC Server Browser">
+      <action name="Execute"><command>/usr/bin/bvnc</command></action>
+    </item>
+    <item label="Brave">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=brave --file-forwarding com.brave.Browser @@u  @@</command></action>
+    </item>
+  </menu> <!-- Internet -->
+  <menu id="Multimedia" label="Multimedia">
+    <item label="ALSA Scarlett2 Control Panel">
+      <action name="Execute"><command>/usr/bin/alsa-scarlett-gui</command></action>
+    </item>
+    <item label="Helvum">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=helvum org.pipewire.Helvum</command></action>
+    </item>
+    <item label="REAPER">
+      <action name="Execute"><command>"/usr/lib/REAPER/reaper"</command></action>
+    </item>
+    <item label="Renoise">
+      <action name="Execute"><command>renoise</command></action>
+    </item>
+    <item label="Surge XT">
+      <action name="Execute"><command>"/usr/bin/Surge XT"</command></action>
+    </item>
+    <item label="Surge XT Effects">
+      <action name="Execute"><command>"/usr/bin/Surge XT Effects"</command></action>
+    </item>
+    <item label="Volume Control">
+      <action name="Execute"><command>pavucontrol</command></action>
+    </item>
+  </menu> <!-- Multimedia -->
+  <menu id="Office" label="Office">
+    <item label="LibreOffice">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice @@u  @@</command></action>
+    </item>
+    <item label="LibreOffice Base">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --base @@u  @@</command></action>
+    </item>
+    <item label="LibreOffice Calc">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --calc @@u  @@</command></action>
+    </item>
+    <item label="LibreOffice Draw">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --draw @@u  @@</command></action>
+    </item>
+    <item label="LibreOffice Impress">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --impress @@u  @@</command></action>
+    </item>
+    <item label="LibreOffice Math">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --math @@u  @@</command></action>
+    </item>
+    <item label="LibreOffice Writer">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --writer @@u  @@</command></action>
+    </item>
+  </menu> <!-- Office -->
+  <menu id="Settings" label="Settings">
+    <item label="Advanced Network Configuration">
+      <action name="Execute"><command>nm-connection-editor</command></action>
+    </item>
+    <item label="Helvum">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=helvum org.pipewire.Helvum</command></action>
+    </item>
+    <item label="Manage Printing">
+      <action name="Execute"><command>xdg-open http://localhost:631/</command></action>
+    </item>
+    <item label="Removable Drives and Media">
+      <action name="Execute"><command>thunar-volman-settings</command></action>
+    </item>
+    <item label="Thunar Preferences">
+      <action name="Execute"><command>thunar-settings</command></action>
+    </item>
+    <item label="Volume Control">
+      <action name="Execute"><command>pavucontrol</command></action>
+    </item>
+  </menu> <!-- Settings -->
+  <menu id="System" label="System">
+    <item label="Avahi Zeroconf Browser">
+      <action name="Execute"><command>/usr/bin/avahi-discover</command></action>
+    </item>
+    <item label="btop++">
+      <action name="Execute"><command>btop</command></action>
+    </item>
+    <item label="Foot">
+      <action name="Execute"><command>foot</command></action>
+    </item>
+    <item label="Foot Client">
+      <action name="Execute"><command>footclient</command></action>
+    </item>
+    <item label="Foot Server">
+      <action name="Execute"><command>foot --server</command></action>
+    </item>
+    <item label="Manage Printing">
+      <action name="Execute"><command>xdg-open http://localhost:631/</command></action>
+    </item>
+    <item label="rtcqs">
+      <action name="Execute"><command>rtcqs_gui</command></action>
+    </item>
+    <item label="Thunar File Manager">
+      <action name="Execute"><command>thunar</command></action>
+    </item>
+    <item label="Yambar">
+      <action name="Execute"><command>yambar</command></action>
+    </item>
+  </menu> <!-- System -->
+</menu> <!-- root-menu -->
+</openbox_menu>

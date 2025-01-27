@@ -1,0 +1,226 @@
+# Typical laptop setup, with wifi, brightness, battery etc, for
+# i3/Sway.
+
+# For X11/i3, you'll want to replace calls to swaymsg with i3-msg, and
+# the sway-xkb module with the xkb module.
+
+# fonts we'll be re-using here and there
+awesome: &awesome Font Awesome 6 Free:style=solid:pixelsize=12
+awesome_brands: &awesome_brands Font Awesome 6 Brands:pixelsize=13
+
+std_underline: &std_underline {underline: { size: 2, color: ff0000ff}}
+
+# This is THE bar configuration
+bar:
+  height: 28
+  location: top
+  spacing: 10
+  margin: 10
+
+  # Default font
+  font: OpenSans:pixelsize=12
+
+  foreground: ddddddff
+  background: 1f1f1fff
+
+  border:
+    width: 0
+    margin: 0
+
+  center:
+    - clock:
+        time-format: "%H:%M"
+        date-format: "%d %-b %Y"
+        content:
+          - string: {text: , font: *awesome, right-margin: 5, foreground: 616161ff}
+          - string: {text: "{time}", right-margin: 15}
+          - string: {text: , font: *awesome, right-margin: 5, foreground: F62B5Aff}
+          - string: {text: "{date}"}
+  left:
+    - i3:
+        content:
+          "":
+            map:
+              default: {string: {text: "{name}"}}
+              conditions:
+                state == focused: {string: {text: "{name}*"}}
+          current: { string: {text: "{application}: {title}"}}
+    - label:
+        content:
+          string: {text: ""}
+
+  right:
+    - cpu:
+        poll-interval: 5000
+        content:
+          map:
+            conditions:
+              id < 0:
+                - string: { text: , right-margin: 5, font: *awesome, foreground: 13C299ff}
+                - string: {text: "{cpu}%"}
+    - mem:
+        poll-interval: 5000
+        content:
+          - string: { text: , right-margin: 5, font: *awesome, foreground: E3C401ff}
+          - string: {text: "{used:gb}G"}
+    # - xkb:
+    #     content:
+    #       string: {text: "{symbol}"}
+    # - removables:
+    #     anchors:
+    #       drive: &drive { text: , font: *awesome}
+    #       optical: &optical {text: , font: *awesome}
+    #     spacing: 5
+    #     content:
+    #       map:
+    #         conditions:
+    #           ~mounted:
+    #             map:
+    #               on-click: udisksctl mount -b {device}
+    #               conditions:
+    #                 ~optical: [{string: *drive}, {string: {text: "{label}"}}]
+    #                 optical: [{string: *optical}, {string: {text: "{label}"}}]
+    #           mounted:
+    #             map:
+    #               on-click: udisksctl unmount -b {device}
+    #               conditions:
+    #                 ~optical:
+    #                   - string: {<<: *drive, deco: *std_underline}
+    #                   - string: {text: "{label}"}
+    #                 optical:
+    #                   - string: {<<: *optical, deco: *std_underline}
+    #                   - string: {text: "{label}"}
+    - network:
+        poll-interval: 30000
+        content:
+          map:
+            default: {empty: {}}
+            conditions:
+              name == enp0s31f6:
+                map:
+                  conditions:
+                    ~carrier: {empty: {}}
+                    carrier:
+                      map:
+                        default: {string: {text: , font: *awesome, foreground: 5DC5F8ff}}
+                        conditions:
+                          state == up && ipv4 != "": {string: {text: , font: *awesome, foreground: 5DC5F8ff}}
+    - network:
+        poll-interval: 30000
+        content:
+          map:
+            default: {empty: {}}
+            conditions:
+              name == wlp4s0:
+                map:
+                  default: {string: {text: , font: *awesome, foreground: 24ACD4ff}}
+                  conditions:
+                    state == down: {string: {text: , font: *awesome, foreground: 24ACD4ff}}
+                    state == up:
+                      map:
+                        default:
+                          - string: {text: , font: *awesome, foreground: 24ACD4ff}
+                          - string: {left-margin: 5, text: "{ssid}"}
+
+                        conditions:
+                          ipv4 == "":
+                            - string: {text: , font: *awesome, foreground: 24ACD4ff}
+                            - string: {left-margin: 5, text: "{ssid}"}
+    - battery:
+        name: BAT0
+        poll-interval: 60000
+        anchors:
+          discharging: &discharging
+            list:
+              items:
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                - string: {left-margin: 5, text: "{capacity}%"}
+        content:
+          map:
+            conditions:
+              state == unknown:
+                <<: *discharging
+              state == discharging:
+                <<: *discharging
+              state == charging:
+                - string: {text: , font: *awesome}
+                - string: {text: "{capacity}% {estimate}"}
+              state == full:
+                - string: {text: , font: *awesome}
+                - string: {text: "{capacity}% full"}
+              state == "not charging":
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                      - string: {text: , foreground: 47B413ff, font: *awesome}
+                - string: {left-margin: 5, text: "{capacity}%"}
+    - battery:
+        name: BAT1
+        poll-interval: 60000
+        anchors:
+          discharging: &discharging
+            list:
+              items:
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                - string: {left-margin: 5, text: "{capacity}%"}
+        content:
+          map:
+            conditions:
+              state == unknown:
+                <<: *discharging
+              state == discharging:
+                <<: *discharging
+              state == charging:
+                - string: {text: , font: *awesome}
+                - string: {text: "{capacity}% {estimate}"}
+              state == full:
+                - string: {text: , font: *awesome}
+                - string: {text: "{capacity}% full"}
+              state == "not charging":
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: ff0000ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                      - string: {text: , foreground: 35D450ff, font: *awesome}
+                - string: {left-margin: 5, text: "{capacity}%"}

@@ -1,0 +1,10 @@
+export PIPEWIRE_LATENCY="64/48000"
+
+export BEMENU_OPTS="-H 28 --ch 15 --hp 5 --fn 'OpenSans 10' --nb '#1f1f1fff' --tf '#c70039ff' --tb '#1f1f1fff' --hf '#ffbf00ff' --cw 2 -p '' --ab '#1f1f1fff' --fb '#1f1f1fff' --hb '#1f1f1fff'"
+export PATH=$PATH:$HOME/.cargo/bin:$HOME/.local/bin
+export EDITOR=helix
+
+alias hx="helix"
+alias ll="ls -ahl"
+
+PS1='\u:\W → '
