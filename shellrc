@@ -1,3 +1,5 @@
+source /usr/share/git/git-prompt.sh
+
 export PIPEWIRE_LATENCY="64/48000"
 
 export BEMENU_OPTS="-H 28 --ch 15 --hp 5 --fn 'OpenSans 10' --nb '#1f1f1fff' --tf '#c70039ff' --tb '#1f1f1fff' --hf '#ffbf00ff' --cw 2 -p '' --ab '#1f1f1fff' --fb '#1f1f1fff' --hb '#1f1f1fff'"
@@ -54,4 +56,8 @@ alias glass='gb'
 alias fucking='sudo'
 alias effing='fucking'
 
-PS1='\u:\W → '
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWCOLORHINTS=1
+
+PS1='\u:\W $(__git_ps1 "%s") \n→ '
