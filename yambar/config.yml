@@ -155,11 +155,11 @@ bar:
               state == discharging:
                 <<: *discharging
               state == charging:
-                - string: {text: , font: *awesome}
+                - string: {text: , foreground: ff0000ff, font: *awesome}
                 - string: {text: "{capacity}% {estimate}"}
               state == full:
-                - string: {text: , font: *awesome}
-                - string: {text: "{capacity}% full"}
+                - string: {text: , font: *awesome, foreground: 47B413ff, right-margin: 5}
+                - string: {text: "full"}
               state == "not charging":
                 - ramp:
                     tag: capacity
@@ -204,11 +204,11 @@ bar:
               state == discharging:
                 <<: *discharging
               state == charging:
-                - string: {text: , font: *awesome}
+                - string: {text: , foreground: ff0000ff, font: *awesome}
                 - string: {text: "{capacity}% {estimate}"}
               state == full:
-                - string: {text: , font: *awesome}
-                - string: {text: "{capacity}% full"}
+                - string: {text: , font: *awesome, right-margin: 5, foreground: 35D450ff}
+                - string: {text: "full"}
               state == "not charging":
                 - ramp:
                     tag: capacity
