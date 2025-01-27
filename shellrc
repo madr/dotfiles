@@ -4,7 +4,54 @@ export BEMENU_OPTS="-H 28 --ch 15 --hp 5 --fn 'OpenSans 10' --nb '#1f1f1fff' --t
 export PATH=$PATH:$HOME/.cargo/bin:$HOME/.local/bin
 export EDITOR=helix
 
+alias gap="git add -p"
+alias gb='git branch -v'
+alias gc='git commit'
+alias gcs='git commit -S'
+alias gcane='git commit --amend --no-edit'
+alias gco="git checkout"
+alias gco-="git checkout -"
+alias gcob="git checkout -b"
+alias gcd='git clean -d -x'
+alias gcod="git checkout develop"
+alias gcom="git checkout master"
+alias gd='git diff'
+alias gf="git fetch"
+alias glo='git log --oneline --decorate'
+alias gm='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
+alias gmd="git merge develop"
+alias gmod="git merge origin/develop"
+alias gmom="git merge origin/master"
+alias gmsot='git merge --strategy-option theirs'
+alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpfwl='gp --force-with-lease'
+alias gpod="git push origin develop"
+alias gpom="git push origin master"
+alias grh='git reset --hard'
+alias gs="git status"
+alias gri="git rebase -i"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+alias gscs="git show --compact-summary"
+
+alias nrs="npm install && npm run serve"
+alias nrb="npm install && npm run build"
+alias nrw="npm install && npm run watch"
+alias nrbw="npm install && npm run build-watch"
+alias nrd="npm install && npm run deploy"
+alias nrr="npm install && npm run release"
+
+alias vadre="curl -4 http://wttr.in/Östersund"
+alias vedreh="curl -4 http://wttr.in/Stockholm"
+alias vädret="curl -4 http://wttr.in/Söderhamn"
+alias whatsmyip="curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+alias whois='dig -t ANY'
+
 alias hx="helix"
-alias ll="ls -ahl"
+alias ll="ls -GAFho"
+alias glenn='gp'
+alias glass='gb'
+alias fucking='sudo'
+alias effing='fucking'
 
 PS1='\u:\W → '
