@@ -30,13 +30,33 @@ bar:
   center:
     - clock:
         time-format: "%H:%M"
-        date-format: "%d %-b %Y"
+        date-format: "%-d %-b %Y"
         content:
           - string: {text: , font: *awesome, right-margin: 5, foreground: 616161ff}
           - string: {text: "{time}", right-margin: 15}
           - string: {text: , font: *awesome, right-margin: 5, foreground: F62B5Aff}
           - string: {text: "{date}"}
   left:
+    - script:
+        path: ~/.config/yambar/wttr.sh
+        args: []
+        content: {string: {text: "{test}"}}
+    # - script:
+    #     path: /usr/bin/playerctl
+    #     args:
+    #       - "--follow"
+    #       - "metadata"
+    #       - "-f"
+    #       - |
+    #         "status|string|{{status}}"
+    #         "artist|string|{{artist}}"
+    #         "title|string|{{title}}"
+    #     content:
+    #       map:
+    #         conditions:
+    #           status == Paused: {empty: {}}
+    #           status == Playing:
+    #             {string: {text: "{{artist} - {title}"}}
     - i3:
         content:
           "":

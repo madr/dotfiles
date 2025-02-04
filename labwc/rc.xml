@@ -157,6 +157,18 @@
     <keybind key="W-Right">
       <action name="SnapToEdge" direction="right" />
     </keybind>
+    <keybind key="W-S-Left">
+      <action name="GrowToEdge" direction="left" />
+    </keybind>
+    <keybind key="W-S-Right">
+      <action name="GrowToEdge" direction="right" />
+    </keybind>
+    <keybind key="W-S-Down">
+      <action name="GrowToEdge" direction="down" />
+    </keybind>
+    <keybind key="W-S-Up">
+      <action name="GrowToEdge" direction="up" />
+    </keybind>
     <keybind key="A-Space">
       <action name="ShowMenu" menu="client-menu" atCursor="no" />
     </keybind>

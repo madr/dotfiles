@@ -66,8 +66,14 @@
     <item label="ALSA Scarlett2 Control Panel">
       <action name="Execute"><command>/usr/bin/alsa-scarlett-gui</command></action>
     </item>
-    <item label="Helvum">
-      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=helvum org.pipewire.Helvum</command></action>
+    <item label="coppwr">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=coppwr io.github.dimtpap.coppwr</command></action>
+    </item>
+    <item label="pwvucontrol">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=pwvucontrol com.saivert.pwvucontrol</command></action>
+    </item>
+    <item label="qpwgraph">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=qpwgraph --file-forwarding org.rncbc.qpwgraph @@  @@</command></action>
     </item>
     <item label="REAPER">
       <action name="Execute"><command>"/usr/lib/REAPER/reaper"</command></action>
@@ -80,9 +86,6 @@
     </item>
     <item label="Surge XT Effects">
       <action name="Execute"><command>"/usr/bin/Surge XT Effects"</command></action>
-    </item>
-    <item label="Volume Control">
-      <action name="Execute"><command>pavucontrol</command></action>
     </item>
   </menu> <!-- Multimedia -->
   <menu id="Office" label="Office">
@@ -112,9 +115,6 @@
     <item label="Advanced Network Configuration">
       <action name="Execute"><command>nm-connection-editor</command></action>
     </item>
-    <item label="Helvum">
-      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=helvum org.pipewire.Helvum</command></action>
-    </item>
     <item label="Manage Printing">
       <action name="Execute"><command>xdg-open http://localhost:631/</command></action>
     </item>
@@ -124,9 +124,6 @@
     <item label="Thunar Preferences">
       <action name="Execute"><command>thunar-settings</command></action>
     </item>
-    <item label="Volume Control">
-      <action name="Execute"><command>pavucontrol</command></action>
-    </item>
   </menu> <!-- Settings -->
   <menu id="System" label="System">
     <item label="Avahi Zeroconf Browser">
@@ -134,6 +131,9 @@
     </item>
     <item label="btop++">
       <action name="Execute"><command>btop</command></action>
+    </item>
+    <item label="coppwr">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=coppwr io.github.dimtpap.coppwr</command></action>
     </item>
     <item label="Foot">
       <action name="Execute"><command>foot</command></action>
@@ -146,6 +146,9 @@
     </item>
     <item label="Manage Printing">
       <action name="Execute"><command>xdg-open http://localhost:631/</command></action>
+    </item>
+    <item label="pwvucontrol">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=pwvucontrol com.saivert.pwvucontrol</command></action>
     </item>
     <item label="rtcqs">
       <action name="Execute"><command>rtcqs_gui</command></action>
