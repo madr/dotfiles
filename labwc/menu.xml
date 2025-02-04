@@ -31,6 +31,9 @@
     </item>
   </menu> <!-- Accessories -->
   <menu id="Development" label="Development">
+    <item label="Boxes">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=gnome-boxes --file-forwarding org.gnome.Boxes @@u  @@</command></action>
+    </item>
     <item label="Zed">
       <action name="Execute"><command>zeditor</command></action>
     </item>
@@ -81,6 +84,9 @@
     <item label="Renoise">
       <action name="Execute"><command>renoise</command></action>
     </item>
+    <item label="Spotify">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u  @@</command></action>
+    </item>
     <item label="Surge XT">
       <action name="Execute"><command>"/usr/bin/Surge XT"</command></action>
     </item>
@@ -128,6 +134,9 @@
   <menu id="System" label="System">
     <item label="Avahi Zeroconf Browser">
       <action name="Execute"><command>/usr/bin/avahi-discover</command></action>
+    </item>
+    <item label="Boxes">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=gnome-boxes --file-forwarding org.gnome.Boxes @@u  @@</command></action>
     </item>
     <item label="btop++">
       <action name="Execute"><command>btop</command></action>

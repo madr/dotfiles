@@ -37,10 +37,10 @@ bar:
           - string: {text: , font: *awesome, right-margin: 5, foreground: F62B5Aff}
           - string: {text: "{date}"}
   left:
-    - script:
-        path: ~/.config/yambar/wttr.sh
-        args: []
-        content: {string: {text: "{test}"}}
+    # - script:
+    #     path: ~/.config/yambar/wttr.sh
+    #     args: []
+    #     content: {string: {text: "{test}"}}
     # - script:
     #     path: /usr/bin/playerctl
     #     args:
