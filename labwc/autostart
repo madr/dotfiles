@@ -1,5 +1,5 @@
 yambar >/dev/null 2>&1 &
 swaybg -i ~/.config/labwc/wallpaper/FLOWER.jpg -m fill >/dev/null 2>&1 &
 swayidle -w \
-    timeout 300 'waylock --init-color 0x000000 --input-color 0x282828 --fail-color 0xff0000' \
-    before-sleep 'waylock --init-color 0x000000 --input-color 0x282828 --fail-color 0xff0000' >/dev/null 2>&1 &
+    timeout 300 'swaylock' \
+    before-sleep 'swaylock' >/dev/null 2>&1 &

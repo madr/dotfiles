@@ -218,7 +218,7 @@
       <action name="SendToDesktop" to="4" wrap="yes" />
     </keybind>
     <keybind key="W-L">
-      <action name="Execute" command="waylock" />
+      <action name="Execute" command="swaylock" />
     </keybind>
     <keybind key="W-Return">
       <action name="Execute" command="foot" />

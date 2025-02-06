@@ -34,7 +34,7 @@ bar:
         content:
           - string: {text: , font: *awesome, right-margin: 5, foreground: 616161ff}
           - string: {text: "{time}", right-margin: 15}
-          - string: {text: , font: *awesome, right-margin: 5, foreground: F62B5Aff}
+          - string: {text: , font: *awesome, right-margin: 5, foreground: 616161ff}
           - string: {text: "{date}"}
   left:
     # - script:
@@ -70,6 +70,9 @@ bar:
           string: {text: ""}
 
   right:
+    # - label:
+    #     content:
+    #       string: {text: "", foreground: F62B5Aff, font: *awesome, on-click: ~/.config/yambar/governor-toggle.sh}
     - cpu:
         poll-interval: 5000
         content:
@@ -244,3 +247,13 @@ bar:
                       - string: {text: , foreground: 35D450ff, font: *awesome}
                       - string: {text: , foreground: 35D450ff, font: *awesome}
                 - string: {left-margin: 5, text: "{capacity}%"}
+    - script:
+        path: ~/.config/yambar/cpu-governor.sh
+        poll-interval: 10000
+        content:
+          map:
+            conditions:
+              governor == performance:
+                string: {text: "", foreground: f62b5aff, font: *awesome, on-click: ~/.config/yambar/governor-toggle.sh}
+              governor == powersave:
+                string: {text: "", foreground: 35d450ff, font: *awesome, on-click: ~/.config/yambar/governor-toggle.sh}
